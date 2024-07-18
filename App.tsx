@@ -1,11 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StatusBar, StyleSheet, Text, View} from 'react-native';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello World!</Text>
-    </View>
+    <>
+      <StatusBar backgroundColor="yellow" barStyle="dark-content" />
+      <View style={styles.container}>
+        <Text style={styles.text}>Hello World!</Text>
+      </View>
+    </>
   );
 };
 
