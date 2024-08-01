@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Platform} from 'react-native';
 
 export default function AppBar() {
   return (
@@ -16,7 +16,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    backgroundColor: '#fad414',
+    backgroundColor: '#f0e32b',
+    ...Platform.select({
+      ios: {
+        shadowColor: 'black',
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
   },
   title: {
     fontWeight: '800',

@@ -1,17 +1,16 @@
 import React from 'react';
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import {StatusBar, StyleSheet, View} from 'react-native';
 import AppBar from './src/components/AppBar';
+import TodoContainer from './src/components/TodoContainer';
 
 const App = () => {
   return (
     <>
-      <StatusBar backgroundColor="#fad414" barStyle="dark-content" />
+      <StatusBar backgroundColor="#f0e32b" barStyle="dark-content" />
       <View style={styles.container}>
         <AppBar />
 
-        <View>
-          <Text>Todo Content List</Text>
-        </View>
+        <TodoContainer />
       </View>
     </>
   );
