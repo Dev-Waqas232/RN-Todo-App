@@ -1,12 +1,17 @@
 import React from 'react';
 import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import AppBar from './src/components/AppBar';
 
 const App = () => {
   return (
     <>
-      <StatusBar backgroundColor="yellow" barStyle="dark-content" />
+      <StatusBar backgroundColor="#fad414" barStyle="dark-content" />
       <View style={styles.container}>
-        <Text style={styles.text}>Hello World!</Text>
+        <AppBar />
+
+        <View>
+          <Text>Todo Content List</Text>
+        </View>
       </View>
     </>
   );
@@ -15,10 +20,6 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-  },
-  text: {
-    textAlign: 'center',
   },
 });
 
